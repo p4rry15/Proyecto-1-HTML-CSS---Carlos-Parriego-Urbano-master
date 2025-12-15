@@ -43,6 +43,11 @@ El repositorio incluye un archivo cancion.html, que es un proyecto específico d
 3.  Haz doble clic en el archivo index.html para abrirlo en tu navegador web favorito.
 4.  Desde la sección de "Proyectos", puedes navegar a la página de la canción o descargar los documentos adjuntos.
 
+### Visita el Proyecto
+
+El proyecto está activo y vusible en el siguiente enlace: 
+[**Haz clic aquí**](https://carlosparriego.netlify.app/)
+
 ## ✒️ Autor
 
 **Carlos Parriego Urbano**
