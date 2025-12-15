@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spotify prueba gratuita</title>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Lobster&family=Oswald:wght@200..700&display=swap');
+
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            color: white;
+            font-family: "Lobster";
+            font-size: 70px;
+        }
+
+        p {
+            color: white;
+        }
+
+        #titulo {
+            text-align: center;
+        }
+
+
+        #titulo_imagen {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        a {
+            text-decoration: none;
+            color: rgb(158, 112, 158);
+            font-family: "Lobster";
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            color: #f2f2f2;
+            padding: 20px;
+            margin: 10px;
+            background-repeat: no-repeat;
+            min-height: 100vh;
+            background: linear-gradient(#263969, #239DB8);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            background: #262626;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+            margin-top: 20px;
+        }
+
+        thead {
+            background: #239DB8;
+            border: none;
+        }
+
+        thead th {
+            padding: 14px;
+            font-size: 18px;
+            text-align: left;
+            color: #ffffff;
+            border: none;
+        }
+
+        tbody td {
+            padding: 12px;
+            border-bottom: 1px solid #3a3a3a;
+            font-size: 15px;
+            border: none;
+        }
+
+        tbody tr:hover {
+            background: #333333;
+            border: none;
+        }
+
+        tbody tr:last-child td {
+            border: none;
+        }
+
+        .img-gris {
+            background: #9b9494;
+            height: 150px;
+        }
+
+        .linea {
+            background: #000;
+            height: 3px;
+        }
+
+        .img-roja {
+            background: #e47e7e;
+            width: 120px;
+            height: 90px;
+            border-radius: 10px;
+        }
+
+        .audio-box {
+            background: #fff;
+            border: 1px solid #ccc;
+            height: 50px;
+            text-align: center;
+        }
+
+        .video-box {
+            background: #1a0f0f;
+            height: 200px;
+        }
+
+        img {
+            max-width: 250px;
+            border-radius: 20px;
+        }
+    </style>
+</head>
+
+<body>
+
+    <div id="titulo_imagen">
+
+        <h1 id="titulo">LOS DIOZES</h1>
+
+        <img src="./imagenes/imagen 2 diabla.jpg" alt="">
+
+    </div>
+
+
+    <table>
+
+        <thead>
+            <tr>
+                <th>Atributo</th>
+                <th>Contenido</th>
+            </tr>
+        </thead>
+
+        <tbody>
+
+
+
+            <tr>
+                <td>Título</td>
+                <td>Diabla</td>
+            </tr>
+
+            <tr>
+                <td>Artista</td>
+                <td>Los Diozes</td>
+            </tr>
+
+            <tr>
+                <td>Género</td>
+                <td>Hip-Hop / Rap</td>
+            </tr>
+
+            <tr>
+                <td>Fecha</td>
+                <td>17 de octubre de 2024</td>
+            </tr>
+
+            <tr>
+                <td>Productor</td>
+                <td>Sceno</td>
+            </tr>
+
+            <tr>
+                <td>Letras</td>
+                <td>Adrian Maldonado y Juan Alberto García Gamez</td>
+            </tr>
+
+            <tr>
+                <td>Foto de Adrian Maldonado</td>
+                <td><img src="./images/adrian maldonado.webp"></td>
+            </tr>
+
+            <tr>
+                <td>Foto de Juan Alberto</td>
+                <td><img src="./images/illojuan imagen.png"></td>
+            </tr>
+
+            <tr>
+                <td>Temática</td>
+                <td>Relación intensa con una mujer llamada “diabla”.</td>
+            </tr>
+
+            
+            <tr>
+                <td>Imagen y Audio</td>
+                <td>
+                    <img src="./images/Los diozes (imagen).jpg">
+                    <br><br>
+                    <audio controls>
+                        <source src="./videos/Videoclip Diozes.mp4" type="audio/mpeg">
+                    </audio>
+                </td>
+            </tr>
+
+            <tr>
+                <td>Información del grupo</td>
+                <td>Los Diozes provienen del videojuego GT5 RolePlay.</td>
+            </tr>
+
+           
+            <tr>
+                <td colspan="2" class="video-box">
+                    <video controls style="width:100%; height:100%;">
+                        <source src="./videos/Videoclip Diozes.mp4" type="video/mp4">
+                    </video>
+                </td>
+            </tr>
+
+        </tbody>
+    </table>
+
+</body>
+
+</html>

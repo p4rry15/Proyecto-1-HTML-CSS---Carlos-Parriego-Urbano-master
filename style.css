@@ -1,0 +1,358 @@
+/* --- IMPORTACIÓN DE FUENTES --- */
+
+@import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
+/* --- VARIABLES GLOBALES --- */
+:root {
+  --padding-space: 20px;
+  --margin-space: 20px;
+  --color-fondo: rgb(37, 35, 35);
+  --color-texto: #ffffff;
+  --color-primario: #ff0000;       /* Rojo base */
+  --color-secundario: #e60808;     /* Rojo oscuro hover */
+  --img-altura: 350px;
+  --img-anchura: 350px;
+  
+  /* Sombras */
+  --sombreado: rgba(255, 255, 255, 0.25) 0px 6px 12px -2px,
+               rgba(255, 246, 246, 0.3) 0px 3px 7px -3px;
+  --sombreado-rojo: rgba(255, 0, 0, 0.25) 0px 6px 12px -2px,
+                    rgba(255, 9, 9, 0.3) 0px 3px 7px -3px;
+}
+
+/* --- RESET Y ESTILOS BASE --- */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box; /* Esto es para el cálculo de medidas */
+}
+
+html {
+  scroll-behavior: smooth; /* Aquí hace un desplazamiento suave al hacer clic en enlaces */
+}
+
+body {
+  color: var(--color-texto);
+  padding: var(--padding-space);
+  background-color: var(--color-fondo);
+  font-family: "Montserrat", Arial, sans-serif;
+  line-height: 1.6;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+li {
+  list-style-type: none;
+}
+
+/* --- TIPOGRAFÍA --- */
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Oswald", sans-serif;
+  margin-bottom: var(--margin-space);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+p {
+  margin-bottom: var(--margin-space);
+  font-family: "Montserrat", sans-serif;
+}
+
+hr {
+    border: 1px solid var(--color-primario);
+    margin-bottom: 20px;
+    opacity: 0.5;
+}
+
+/* --- HEADER --- */
+header {
+  background-color: rgb(0, 0, 0);
+  padding: 10px 30px;
+  border-radius: 20px;
+  margin-bottom: 40px;
+  top: 10px;
+  box-shadow: var(--sombreado);
+}
+
+.nav_header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap; /* Permite que baje si no hay espacio */
+}
+
+.nav_header h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo_cpu {
+  height: 80px;
+  width: auto;
+  transition: transform 0.3s;
+}
+
+
+#lista_header {
+  display: flex;
+  gap: 30px;
+  align-items: center;
+  margin: 0;
+}
+
+#lista_header li a {
+    font-size: 18px;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+#lista_header li a:hover {
+    color: var(--color-primario);
+}
+
+/* --- SECCIÓN INICIO --- */
+.inicio {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+/* Contenedor flexible para las fotos del inicio */
+.navegacion-visual {
+    display: flex;
+    justify-content: center; /* Centra las imágenes horizontalmente */
+    align-items: center;
+    gap: 40px; /* Espacio entre imágenes */
+    flex-wrap: wrap; /* Permite que bajen en móviles */
+    margin-top: 30px;
+}
+
+.fotos_inicio {
+  width: var(--img-anchura);
+  height: var(--img-altura);
+  max-width: 100%; /* Para que no se salga en móviles */
+  object-fit: cover;
+  object-position: center;
+  border-radius: 10px;
+  border: 3px solid var(--color-primario);
+  box-shadow: var(--sombreado-rojo);
+  transition: transform 0.3s ease-in-out;
+}
+
+.fotos_inicio:hover {
+  transform: scale(1.05); /*Para agrandar las fotos, cuando el puntero pase por encima*/
+  cursor: pointer;
+}
+
+/* --- SECCIÓN SOBRE MÍ Y TEXTOS --- */
+#sobre_mi, #contacto {
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+    text-align: justify;
+}
+
+/* --- HOBBIES --- */
+.hobbies-section {
+    margin-bottom: 60px;
+    text-align: center;
+}
+
+.hobbies-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+  padding: 20px;
+}
+
+.hobbie-item {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.imagen_hobbie {
+  width: 100%;
+  max-width: var(--img-anchura);
+  height: var(--img-altura);
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: var(--sombreado);
+  transition: transform 0.3s ease-in-out;
+}
+
+.imagen_hobbie:hover {
+  transform: scale(1.05);
+}
+
+/* --- PROYECTOS --- */
+#proyectos {
+    text-align: center;
+    margin-bottom: 40px;
+}
+
+#organizador_proyectos {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 50px;
+  flex-wrap: wrap; /* Importante para responsive */
+  margin: 40px auto;
+}
+
+.contenedor {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 350px; /* Ancho fijo para las tarjetas */
+}
+
+.foto_pc {
+  height: var(--img-altura);
+  width: 100%; /* Ajuste al contenedor */
+  object-fit: contain; /* También podría haber puesto cover */
+  border-radius: 10px;
+  margin-bottom: 20px;
+  background-color: rgba(255,255,255,0.05); 
+}
+
+/* --- BOTONES (Clase compartida para unificar diseño) --- */
+.volver_inicio, .proyecto_red, .submit-button {
+  display: inline-block; /* manera en la que va a actuar el botón */
+  margin: 20px auto;
+  padding: 12px 30px;
+  background-color: var(--color-primario);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  font-family: "Oswald", sans-serif;
+  font-size: 18px;
+  text-align: center;
+  box-shadow: var(--sombreado);
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  width: auto; /* Ancho automático según contenido */
+}
+
+/* Hover para todos los botones */
+.volver_inicio:hover, .proyecto_red:hover, .submit-button:hover {
+  background-color: var(--color-secundario);
+}
+
+/* Contenedor para centrar botones */
+.volver-container {
+    text-align: center;
+    margin-top: 20px;
+}
+
+/* --- EXPLICACIÓN PROYECTOS --- */
+.detalle-proyectos {
+    max-width: 1000px;
+    margin: 0 auto 60px auto;
+}
+.detalle-proyectos article {
+    margin-bottom: 30px;
+}
+
+/* --- FORMULARIO DE CONTACTO --- */
+.contact-form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.form-group label {
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.form-group input, .form-group textarea {
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    font-family: "Montserrat", sans-serif;
+}
+
+/* --- FOOTER --- */
+footer {
+  margin-top: 50px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255,255,255,0.1);
+  text-align: center;
+}
+
+.logo-footer-container {
+    margin-bottom: 20px;
+}
+
+.logo_cpu_footer {
+    width: 60px;
+    height: auto;
+    cursor: pointer;
+}
+
+#contenedor_footer {
+  display: flex;
+  justify-content: space-around; /* Distribuye columnas */
+  align-items: flex-start;
+  margin-bottom: 30px;
+  flex-wrap: wrap;
+}
+
+.columna_web, .columna_social {
+    min-width: 200px;
+}
+
+.lista_footer li {
+    margin: 10px 0;
+}
+
+.lista_footer a:hover {
+    color: var(--color-primario);
+    text-decoration: underline;
+}
+
+#copy {
+    margin-top: 30px;
+    font-size: 0.9rem;
+    opacity: 0.7;
+}
+
+/* --- RESPONSIVE (MÓVIL) --- */
+@media (max-width: 768px) {
+    .nav_header {
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    #lista_header {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    #organizador_proyectos {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .nav_header h1 {
+        text-align: center;
+    }
+}
